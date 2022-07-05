@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: disinformation-deployment
+  name: main-deployment
   labels:
-    app: disinformation-server
+    app: main-server
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: disinformation-server
+      app: main-server
   template:
     metadata:
       labels:
-        app: disinformation-server
+        app: main-server
     spec:
       containers:
       - name: disinformation-backend
