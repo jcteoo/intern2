@@ -11,7 +11,7 @@ def RESTFUL():
     elif request.method == 'POST':              # [IMPORTANT] A POST request will be triggered/sent to the rest API whenever a FORM (via html) is submitted
         input_text = request.form['texts']
         data = {"data": input_text}
-        response = requests.post(url="http://127.0.0.1:8010", json=data)      # [SUPER IMPORTANT] This sends the request to ANOTHER REST API to carry out the processing
+        response = requests.post(url="http://disinformation-svc:5020/", json=data)      # [SUPER IMPORTANT] This sends the request to ANOTHER REST API to carry out the processing
         print(response.text)
         return render_template('index.html', content=response.text)       # "response.text" extracts the text data from the REST API RESPONSE
 
