@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])        # Allow the REST API endpoint to take in GET/POST request(s)
 def RESTFUL():
     if request.method == 'GET':                 # [IMPORTANT] By default, when the client first enters the URL, he is in fact sending a GET request
-        return render_template('index.html')
+        #return render_template('index.html')
+        return "hello world"
 
     elif request.method == 'POST':              # [IMPORTANT] A POST request will be triggered/sent to the rest API whenever a FORM (via html) is submitted
         input_text = request.form['texts']
