@@ -15,9 +15,9 @@ spec:
         app: main-server
     spec:
       containers:
-      - name: disinformation-backend
+      - name: main-backend
         image: ryanangweihao/rang012_docker_repository:DISINFORMATION_MODEL
         ports:
-        - containerPort: 8020
+        - containerPort: 8010
       imagePullSecrets:
       - name: regcred
