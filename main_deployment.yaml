@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: main-backend
-        image: ryanangweihao/rang012_docker_repository:DISINFORMATION_MODEL
+        image: ryanangweihao/rang012_docker_repository:MAIN
         ports:
         - containerPort: 8010
       imagePullSecrets:
