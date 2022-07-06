@@ -7,8 +7,8 @@ app = Flask(__name__)
 def RESTFUL():
 
     if request.method == 'GET':                 # [IMPORTANT] By default, when the client first enters the URL, he is in fact sending a GET request
-        #return render_template('index.html')
-        return "hello world"
+        return render_template('index.html')
+        #return "hello world"
 
     elif request.method == 'POST':              # [IMPORTANT] A POST request will be triggered/sent to the rest API whenever a FORM (via html) is submitted
         input_text = request.form['texts']
